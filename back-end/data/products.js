@@ -1,6 +1,6 @@
 const products = [
     {
-        "name": "Mona Lisa1",
+        "name": "Mona Lisa111111111111111111111",
         "category": "sculpture",
         "images": [
             "https://img.mako.co.il/2018/05/16/rgiohj_i.jpg",
@@ -18,7 +18,7 @@ const products = [
         "price": 1000,
         "artist": "ayelet packter",
         "new": true,
-        "contInStock":0,
+        "countInStock":0,
         "rating":4,
         "numReviews":4
 
@@ -43,7 +43,7 @@ const products = [
         "artist": "ayelet packter",
         "new": true,
         "tax": 0,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -68,7 +68,7 @@ const products = [
         "artist": "yair goldman",
         "new": true,
         "tax": 0,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
     },
@@ -92,7 +92,7 @@ const products = [
         "artist": "yair goldman",
         "new": true,
         "tax": 0,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -117,7 +117,7 @@ const products = [
         "artist": "yair goldman",
         "new": false,
         "tax": 0,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -142,7 +142,7 @@ const products = [
         "artist": "yair goldman",
         "new": false,
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -167,7 +167,7 @@ const products = [
         "artist": "boten goldman",
         "new": true,
         "tax": 0,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -194,7 +194,7 @@ const products = [
         "artist": "boten goldman",
         "new": false,
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -221,7 +221,7 @@ const products = [
         "artist": "boten goldman",
         "new": false,
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -248,7 +248,7 @@ const products = [
         "artist": "boten goldman",
         "new": false, 
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -275,7 +275,7 @@ const products = [
         "artist": "bnaia goldman",
         "new": false, 
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -301,7 +301,7 @@ const products = [
         "artist": "boten goldman",
         "new": false, 
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":4,
         "numReviews":4
 
@@ -327,7 +327,7 @@ const products = [
         "artist": "boten packter",
         "new": true, 
         "tax": 10,
-        "contInStock":10,
+        "countInStock":10,
         "rating":3.5,
         "numReviews":4
     }
