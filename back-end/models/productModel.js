@@ -26,11 +26,7 @@ const productSchema = new Schema({
   technique: { type: String },
   framing: { type: String },
   shipping: { type: String },
-  dimensions:{
-    length: { type: Number },
-    height: { type: Number },
-    width: { type: Number },
-  },
+  dimensions:{ type: String },
   countInStock: {
     type: Number,
     required: true,

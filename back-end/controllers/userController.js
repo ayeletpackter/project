@@ -118,4 +118,77 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 })
 
 
-export { authUser, getUserProfile, registerUser,updateUserProfile }
+//@desc      get all user 
+//@route      GET api/users
+//@access      private/Admin
+const getUsers = asyncHandler(async (req, res) => {
+    const users = await User.find({})//את זה מקבלים מהאוס מידלוור מפונקצית פרוטקטד
+res.json(users)
+    
+})
+
+
+
+//@desc      delete user 
+//@route      DELETE api/users/:id
+//@access      private/Admin
+const deleteUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id)
+    if(user){
+        await user.remove()
+        res.json({message:'User removed'})
+
+    }else{
+        res.status(404)
+        throw new Error('User not found')
+    }
+   
+    
+})
+
+
+//@desc      get  user  by id
+//@route      GET api/users/:id
+//@access      private/Admin
+const getUserById = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id).select('-password')//שולחים הכל חוץ מהססימא
+    if(user){
+        res.json(user)
+    }else{
+        res.status(404)
+        throw new Error('User not found')
+    }
+
+    
+})
+
+
+
+//@desc      update user 
+//@route      PUT api/users/:id
+//@access      private
+const updateUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id)
+
+    if (user) {
+        user.name = req.body.name || user.name
+        user.email = req.body.email || user.email
+       user.isAdmin=req.body.isAdmin//אין כאן או כדי שהערך של זה ישתנה ולא ישאר כל הזמן אדמין גם אם שיננו אותו ליוזר רגיל
+
+        const updatedUser=await user.save()
+        res.json({
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            isAdmin: updatedUser.isAdmin,
+        })
+
+    } else {
+        res.status(404)
+        throw new Error('user not found')
+    }
+})
+
+
+
+export { authUser, getUserProfile,deleteUser, registerUser,updateUserProfile,getUsers,getUserById ,updateUser}
