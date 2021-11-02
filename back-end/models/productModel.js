@@ -3,7 +3,12 @@ import mongoose from 'mongoose'
 const reviewSchema=mongoose.Schema({
   name:{type:String,require:true},
   rating:{type:Number,require:true},//דירוג של מישהו ספציפי
-  comment:{type:String,require:true}
+  comment:{type:String,require:true},
+  user: {//הקשר בין החוות דעת למשתמשר
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: 'User',
+  }
 },{timestamps:true})
 
 
@@ -21,7 +26,7 @@ const productSchema = new Schema({
   price: { type: Number },
   priceAfterSale: { type: Number },
   new: { type: Boolean },
-  artistName: { type: String },
+  artist: { type: String },
   YearOfCreation: { type: String },
   technique: { type: String },
   framing: { type: String },
